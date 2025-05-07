@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .btn {
+            display:block;
+            border:1px solid #000;
+            width:400px; height:200px;
+        }
+        #btn1 {
+            /* gradient 사용시 -color 없이 통합 background로 명령한다. */
+            background:linear-gradient(-30deg, #eee, rgba(255,0,0,0.5), #ff0);
+            background-size:400%;
+            transition:all 1s;
+        }
+        #btn1:hover {
+            background-position:100% 0;
+        }
+        h1 {
+            text-transform:uppercase;
+            font-size:2.5rem;
+            font-weight:800;
+            background:linear-gradient(90deg, purple, darkblue, #555, brown);
+            /* display:inline-block;내용만큼한 인식 */
+            width:max-content;
+            /* gradient 색상을 글자에 적용하기 위한 방법(마스크구조) */
+            color:transparent;
+            background-clip:text;
+            background-size:400%;
+            transition:all 2s;
+        }
+        h1:hover {
+            background-position:100% 0;
+        }
+        h2 {
+            font-size:3.5rem;
+            font-weight:800;
+            background: #ff001e;
+            background: linear-gradient(90deg,rgba(245, 5, 5, 1) 0%, rgba(255, 127, 8, 1) 6%, rgba(251, 255, 8, 1) 13%, rgba(106, 255, 0, 1) 21%, rgba(2, 163, 23, 1) 28%, rgba(3, 45, 255, 1) 36%, rgba(0, 13, 255, 1) 46%, rgba(221, 0, 255, 1) 52%, rgba(0, 0, 0, 1) 63%, rgba(255, 255, 255, 1) 69%, rgba(11, 1, 13, 1) 77%, rgba(255, 255, 255, 1) 84%, rgba(0, 0, 0, 1) 92%, rgba(255, 255, 255, 1) 96%);
+            color:transparent;
+            background-clip:text;
+            background-size:400%;
+            transition:all 5s;
+        }
+        h2:hover {
+            background-position:100% 0;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover me!</button>
+    <h1>HTML % CSS % Javascript & figma & react</h1>
+    <h2>가나다라마바사아자<br>차카타파하</h2>
+</body>
+</html>
