@@ -53,11 +53,17 @@ main .bg_wrap .bg3 {
 main .txt {}
 /* 메인 자동차 위 리스트3 */
 /* 메인 자동차 */
-main .car {margin-top:150px; text-align:center; width:600px;}
+main .car {
+    margin-top:150px; text-align:center; width:600px;
+}
 main .car #car {width:100%;}
 main .car #left_tire, main .car #right_tire {
     position:absolute; bottom:25px; width:67px;
 }
-main .car #left_tire {left:102px;}
-main .car #right_tire {right:91px;}
+main .car #left_tire {
+    left:102px;
+}
+main .car #right_tire {
+    right:91px;
 
+}
