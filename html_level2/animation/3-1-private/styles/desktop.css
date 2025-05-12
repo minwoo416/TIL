@@ -31,12 +31,18 @@ main {
 }
 main > * {max-width:1400px; margin:0 auto;}
 /* 중첩순서 처리 배경(10) 그라디언트(20) 나머지(30) */
-main .bg_wrap {position:absolute; z-index:10;}
+main .bg_wrap {
+    position:absolute; z-index:10;
+    overflow:hidden;
+}
 main .txt, main .car_list, main .car, main .scroll {
     width:1400px; margin:0 auto; position:relative; z-index:30;
 }
 /* 메인배경 */
-main .bg_wrap .bg {width:1400px; margin:0 auto;}
+main .bg_wrap .bg {
+    width:1400px; margin:0 auto;
+    animation:translate 10s linear infinite;
+}
 main .bg_wrap .bg1 {
     height:100px; 
     background:url(../images/bg_cloud.png) repeat-x;
@@ -44,10 +50,13 @@ main .bg_wrap .bg1 {
 main .bg_wrap .bg2 {
     height:200px; 
     background:url(../images/bg_city1.png) repeat-x;
+    animation:slow 3s linear infinite;
 }
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
     background:url(../images/bg_city2.png) repeat-x;
+    animation:fast 3s linear infinite;
+
 }
 /* 메인제목 */
 main .txt {}
@@ -59,11 +68,29 @@ main .car {
 main .car #car {width:100%;}
 main .car #left_tire, main .car #right_tire {
     position:absolute; bottom:25px; width:67px;
+    animation:rotate 1s linear infinite both;
+    animation:rotate 1s linear infinite both;
 }
 main .car #left_tire {
     left:102px;
 }
 main .car #right_tire {
     right:91px;
+}
+@keyframes rotate {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes translate {
+    0% {transform:translatex(0);}
+    100% {transform:translatex(100px);}
+}
+@keyframes fast {
+    0% { background-position-x:0; }
+    100% { background-position-x:1000px; }
+}
 
+@keyframes slow{
+    0% { background-position-x:0; }
+    100% { background-position-x:300px; }
 }
