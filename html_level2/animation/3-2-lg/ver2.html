@@ -29,7 +29,7 @@
             width:790px; height:640px; position:relative;
             overflow:hidden; 
         }
-        main .video_bg video {
+        main .video_bg video {/* 변경하게해야하는 동영상 */
             position:absolute;
             left:-100px; top:-200px; z-index:10;
         }
@@ -38,10 +38,15 @@
             left:0; top:0; z-index:20;
             width:100%;
         }
-        main .txt_bg_ani {
+        main .txt_bg_ani {/* 움직이게해야하는 사진 */
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation:right 10s linear infinite backwards;
+        }
+        @keyframes right {
+            0% {background-position-x:0;}
+            100% {background-position-x:1000px;}
         }
     </style>
 </head>
@@ -54,6 +59,7 @@
         <div class="center">
             <div class="video_bg">
                 <video src="video/golden.mp4" autoplay muted loop></video>
+                <video src="./images/sea.mp4" autoplay muted loop></video>
                 <img src="images/img_intro.png" alt="">
             </div>
             <div class="txt_bg_ani"></div>
