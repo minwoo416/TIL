@@ -31,7 +31,7 @@
             text-align:center; color:#fff;
             font-size:3rem; letter-spacing:-1px;
             position:relative; top:400px;
-            animation:move 1s ease-in-out both;
+            animation:move 0.7s ease-out both;
         }
         /* class */
 
@@ -41,8 +41,9 @@
             100% {transform:scale(115%);}
         }
         @keyframes move{
-            0% {transform:translatey(0px) scale(0); opacity:0;}
-            100% {transform:translatey(-30px) scale(1); opacity:1;}
+            0% {transform:translatey(0px) scale(0.7); opacity:0;}
+            50% {opacity:0.5;}
+            100% {transform:translatey(-20px) scale(1); opacity:1;}
         }
     </style>
     <script>
